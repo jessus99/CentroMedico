@@ -19,7 +19,7 @@
                                                 <option value="Rayos X">Rayos X</option>
                                         </select><br>
                                         <label for="exampleSelect2">nombre_Doctor</label>
-                                        <select class="form-select" name="nombre_Doctor" id="exampleSelect2">
+                                        <select class="form-select" name="nombre_doctor" id="exampleSelect2">
                                                 <option value="Jesus Hernandez">Jesus Hernandez</option>
                                                 <option value="Carlos Valverde">Carlos Valverde</option>
                                                 <option value="Carlos Valverde">Jose Campbell</option>

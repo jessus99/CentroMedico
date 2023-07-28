@@ -36,7 +36,7 @@ if (isset($_GET['cargar'])) {
             <tr class="table-primary" style="height:10%;">
 
               <td class='size'><?php echo $a['nombre_cita']; ?></td>
-              <td class='size'><?php echo $a['nombre_profesor']; ?></td>
+              <td class='size'><?php echo $a['nombre_doctor']; ?></td>
               <td class='size'><?php echo $a['horario']; ?></td>
               <td class='ajust'><?php echo $a['tipo']; ?></td>
               <td class='ajust'><?php echo $a['fecha']; ?></td>

@@ -1,7 +1,7 @@
 <?php
 ?>
 <div class="card bg-light mb-3 mx-auto" style="width:50%">
-        <div class="card-header">Registrar Materia</div>
+        <div class="card-header">Registrar Cita</div>
         <div class="card-body">
                 <form id="form_registro_citas" action="" method="POST">
                         <input type="hidden" name="action" value="insertar">
@@ -9,12 +9,12 @@
                         <div class="modal-body">
 
                         <div class="form-group">
-                                     <label for="nombre_cita">Nombre Materia: </label>
+                                     <label for="nombre_cita">Nombre Cita: </label>
                                         <input type="text" id="nombre_cita" class="form-control" name="nombre_cita" required="required" pattern="[A-Za-z ]+"  placeholder="Nombre de la cita">
                                 </div>
                                 <div class="form-group">
-                                     <label for="nombre_profesor">Nombre Profesor: </label>
-                                        <input type="text" id="profesor_presor" class="form-control" name="nombre_profesor" required="required" pattern="[A-Za-z ]+"  placeholder="Nombre del Profesor">
+                                     <label for="nombre_doctor">Nombre Doctor: </label>
+                                        <input type="text" id="nombre_doctor" class="form-control" name="nombre_doctor" required="required" pattern="[A-Za-z ]+"  placeholder="Nombre del Doctor">
                                 </div>
              
                                 <div class="form-group">

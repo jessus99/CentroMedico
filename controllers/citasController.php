@@ -6,7 +6,7 @@ if (isset($_POST['action'])) {
 class citasController
 {
     private $nombre_cita;
-    private $nombre_Doctor;
+    private $nombre_doctor;
     private $horario;
     private $tipo;
 
@@ -17,7 +17,7 @@ class citasController
 
     public function getNombreDoctor()
     {
-        return $this->nombre_Doctor;
+        return $this->nombre_doctor;
     }
 
     public function getHorario()
@@ -35,9 +35,9 @@ class citasController
         $this->nombre_cita = $nombre_cita;
     }
 
-    public function setNombreProfesor($nombre_Doctor): void
+    public function setNombreDoctor($nombre_doctor): void
     {
-        $this->nombre_Doctor = $nombre_Doctor;
+        $this->nombre_doctor = $nombre_doctor;
     }
 
     public function setHorario($horario): void
@@ -54,7 +54,7 @@ class citasController
 
         $cita = new citasModel();
         $cita->setNombreCita($_POST['nombre_cita']);
-        $cita->setNombreProfesor($_POST['nombre_Doctor']);
+        $cita->setNombreDoctor($_POST['nombre_doctor']);
         $cita->setHorario($_POST['horario']);
         $cita->setTipo($_POST['tipo']);
         $cita->setIdUsuario($_POST['id']);
