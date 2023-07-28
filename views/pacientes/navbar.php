@@ -20,9 +20,6 @@
       <li class="nav-item">
         <a class="nav-link" href="./?pagina=mensajes">Mensajes</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./?pagina=matricula">Citas Medicas</a>
-      </li>
 
       <li class="nav-item">
         <a class="nav-link span" href="./controllers/userController.php?action=logout">Cerrar Sesión</a>

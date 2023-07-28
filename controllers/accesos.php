@@ -20,19 +20,6 @@ if (isset($_SESSION['perfil'])) {
                     require_once './config/conexion.php';
                     require_once './views/pacientes/inicio.php';
                     break;
-                case 'matricula':
-                    require_once './config/conexion.php';
-                    require_once './models/citasModel.php';
-                    require_once './controllers/citasController.php';
-
-                    $citas = new citasController();
-
-                    $respuesta_citas = $citas->cargarCitas($_SESSION['id']);
-
-                    require_once './views/pacientes/matricula.php';
-                    require_once './views/citas/lista_citas.php';
-                    echo "<script src='./js/script_citas.js'></script>";
-                    break;
                 case 'mensajes':
                     require_once './config/conexion.php';
                     require_once './models/mensajesModel.php';
@@ -149,6 +136,19 @@ if (isset($_SESSION['perfil'])) {
                     }
                     echo "<script src='./js/script_mensajes4.js'></script>";
                     echo '</div>';
+                    break;
+                case 'registrar_cita':
+                    require_once './config/conexion.php';
+                    require_once './models/citasModel.php';
+                    require_once './controllers/citasController.php';
+
+                    $citas = new citasController();
+
+                    $respuesta_citas = $citas->cargarCitas($_SESSION['id']);
+
+                    require_once './views/Doctor/registrar_cita.php';
+                    require_once './views/citas/lista_citas.php';
+                    echo "<script src='./js/script_citas.js'></script>";
                     break;
             }
 
