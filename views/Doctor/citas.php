@@ -24,7 +24,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                        <label for="tipo">Tipo:</label>
+                                        <label for="tipo">Tipos:</label>
                                                 <input type="text" class="form-control" id="tipo" name="tipo" required="required" placeholder="Tipo de jornada">
                                 
                                 </div>
