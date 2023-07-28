@@ -4,7 +4,7 @@
     <div class="mx-auto col-lg-6 " style="margin-top:150px;">
         <div id='img_logo'>
 
-            <img src="images/logo/INIAM.png" style="border-radius: 0%; width:650px;height:200px; " class="mx-auto d-block" alt="...">
+            <img src="images/logo/Logo.png" style="border-radius: 0%; width:500px;height:350px; " class="mx-auto d-block" alt="...">
 
         </div>
         <div class="card m-1">
