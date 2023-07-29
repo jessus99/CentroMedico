@@ -106,13 +106,14 @@ if (isset($_SESSION['perfil'])) {
                     require_once './config/conexion.php';
                     require_once './models/userModel.php';
                     require_once './controllers/userController.php';
-
-                    $usuarios = new userController();
-                    $respuestaUsuarios = $usuarios->readAllUser();
-                    require_once './views/Doctor/lista_pacientes.php';
+                    $pacientes= new userController();
+                    $respuesta_pacientes = $pacientes->readAllUser();
                     require_once './views/Doctor/registro.php';
                     require_once './views/Doctor/modificar.php';
+                    require_once './views/Doctor/lista_pacientes.php';
+                    
                     echo "<script src='./js/script_Doctor.js'></script>";
+                    
                     break;
                 case 'mensajes':
                     require_once './views/Doctor/navbar.php';
@@ -138,9 +139,15 @@ if (isset($_SESSION['perfil'])) {
                     echo '</div>';
                     break;
                 case 'registrar_cita':
+                    require_once './views/Doctor/navbar.php';
                     require_once './config/conexion.php';
                     require_once './models/citasModel.php';
                     require_once './controllers/citasController.php';
+                    require_once './models/userModel.php';
+                    require_once './controllers/userController.php';
+                    $usuarios = new userController();
+                    $respuestaUsuarios = $usuarios->readAllUser();
+                    echo "<div class='row'>";
 
                     $citas = new citasController();
 

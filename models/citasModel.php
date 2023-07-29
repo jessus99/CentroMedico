@@ -5,7 +5,7 @@ if (isset($_POST['action'])) {
 
 class citasModel
 {
-
+    private $nombre_paciente;
     private $nombre_cita;
     private $nombre_doctor;
     private $horario;
@@ -20,6 +20,10 @@ class citasModel
         $this->idUsuario = $idUsuario;
     }
 
+    public function getNombrePaciente()
+    {
+        return $this->nombre_paciente;
+    }
     public function getNombreCita()
     {
         return $this->nombre_cita;
@@ -40,6 +44,10 @@ class citasModel
         return $this->tipo;
     }
 
+    public function setNombrePaciente($nombre_paciente): void
+    {
+        $this->nombre_paciente = $nombre_paciente;
+    }
     public function setNombreCita($nombre_cita): void
     {
         $this->nombre_cita = $nombre_cita;
@@ -64,8 +72,9 @@ class citasModel
         try {
             $db = conexion::getConnect(); //inicia la conexion
             $db->beginTransaction(); //inicia la transaccion
-            $consulta = $db->prepare("insert into tbl_citas (nombre_cita,nombre_doctor,horario,tipo,id_usuario)"
-                . " values (:nombre_cita,:nombre_doctor,:horario,:tipo,:id_usuario)");
+            $consulta = $db->prepare("insert into tbl_citas (nombre_paciente,nombre_cita,nombre_doctor,horario,tipo,id_usuario)"
+                . " values (:nombre_paciente,:nombre_cita,:nombre_doctor,:horario,:tipo,:id_usuario)");
+            $consulta->bindValue(':nombre_paciente', $cita->getNombrePaciente());
             $consulta->bindValue(':nombre_cita', $cita->getNombreCita());
             $consulta->bindValue(':nombre_doctor', $cita->getnombreDoctor());
             $consulta->bindValue(':horario', $cita->getHorario());
@@ -85,7 +94,7 @@ class citasModel
         $citas = []; //arreglo 
         try {
             $db = conexion::getConnect();
-            $consulta = $db->prepare("SELECT a.id, a.nombre_cita, a.nombre_doctor, a.horario, t.nombre as tipo, a.fecha FROM tbl_citas a INNER JOIN tbl_tipos t ON a.tipo = t.id where a.id_usuario =$id");
+            $consulta = $db->prepare("SELECT a.id, a.nombre_paciente, a.nombre_cita, a.nombre_doctor, a.horario, t.nombre as tipo, a.fecha FROM tbl_citas a INNER JOIN tbl_tipos t ON a.tipo = t.id where a.id_usuario =$id");
             $consulta->execute();
             foreach ($consulta->fetchAll(PDO::FETCH_ASSOC) as $cita) {
                 $citas[] = $cita;
@@ -103,7 +112,7 @@ class citasModel
         $citas = []; //arreglo 
         try {
             $db = conexion::getConnect();
-            $consulta = $db->prepare("SELECT a.id, a.nombre_cita, a.nombre_doctor, a.horario, t.nombre as tipo, a.fecha FROM tbl_citas a INNER JOIN tbl_tipos t ON a.tipo = t.id where a.id_usuario =$id");
+            $consulta = $db->prepare("SELECT a.id, a.nombre_paciente, a.nombre_cita, a.nombre_doctor, a.horario, t.nombre as tipo, a.fecha FROM tbl_citas a INNER JOIN tbl_tipos t ON a.tipo = t.id where a.id_usuario =$id");
             $consulta->execute();
             foreach ($consulta->fetchAll(PDO::FETCH_ASSOC) as $cita) {
                 $citas[] = $cita;
@@ -122,7 +131,7 @@ class citasModel
         $citas = []; //arreglo 
         try {
             $db = conexion::getConnect();
-            $consulta = $db->prepare("SELECT a.id, a.nombre_cita, a.nombre_doctor, a.horario, t.nombre as tipo, a.fecha FROM tbl_citas a INNER JOIN tbl_tipos t ON a.tipo = t.id where a.id_usuario =$id");
+            $consulta = $db->prepare("SELECT a.id, a.nombre_paciente, a.nombre_cita, a.nombre_doctor, a.horario, t.nombre as tipo, a.fecha FROM tbl_citas a INNER JOIN tbl_tipos t ON a.tipo = t.id where a.id_usuario =$id");
             $consulta->execute();
             foreach ($consulta->fetchAll(PDO::FETCH_ASSOC) as $cita) {
                 $citas[] = $cita;

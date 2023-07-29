@@ -24,7 +24,7 @@ function registrarCita(evento) {
 				$("#mensajes_ok_citas").css("display", "block");
 				$("#txt_mensaje_cita").text("Cita registrada con éxito");
 				window.setTimeout(function () {
-					window.location.href = "./?pagina=citas";
+					window.location.href = "./?pagina=registrar_cita";
 				}, 1000);
 			} else {
 				$("#mensajes_error_citas").css("display", "block");
@@ -47,7 +47,7 @@ function fn_eliminar(data) {
 				$("#mensajes_ok_citas").css("display", "block");
 				$("#txt_mensaje_cita").text("Cita registrada con éxito");
 				window.setTimeout(function () {
-					window.location.href = "./?pagina=citas";
+					window.location.href = "./?pagina=registrar_cita";
 				}, 1000);
 			} else {
 				$("#mensajes_error_citas").css("display", "block");

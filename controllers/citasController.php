@@ -4,12 +4,17 @@ if (isset($_POST['action'])) {
     require_once '../models/citasModel.php';
 }
 class citasController
-{
+{   
+    private $nombre_paciente;
     private $nombre_cita;
     private $nombre_doctor;
     private $horario;
     private $tipo;
 
+    public function getNombrePaciente()
+    {
+        return $this->nombre_paciente;
+    }
     public function getNombreCita()
     {
         return $this->nombre_cita;
@@ -30,6 +35,10 @@ class citasController
         return $this->tipo;
     }
 
+    public function setNombrePaciente($nombre_paciente): void
+    {
+        $this->nombre_paciente = $nombre_paciente;
+    }
     public function setNombreCita($nombre_cita): void
     {
         $this->nombre_cita = $nombre_cita;
@@ -53,6 +62,7 @@ class citasController
     {
 
         $cita = new citasModel();
+        $cita->setNombrePaciente($_POST['nombre_paciente']);
         $cita->setNombreCita($_POST['nombre_cita']);
         $cita->setNombreDoctor($_POST['nombre_doctor']);
         $cita->setHorario($_POST['horario']);

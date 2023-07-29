@@ -41,7 +41,7 @@ function fn_citas(){
     }
    
     $.ajax({
-            url: "controllers/accesos.php?pagina=citas",
+            url: "controllers/accesos.php?pagina=registrar_cita",
             type: "POST",
             datatype: "html",
             data: data,

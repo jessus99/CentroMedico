@@ -12,10 +12,8 @@ class userController
     private $id;
     private $name;
     private $lastname;
-    private $addresses;
     private $email;
     private $password;
-    private $contact;
     private $perfil;
     private $db;
 
