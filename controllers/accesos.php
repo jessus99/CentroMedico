@@ -67,6 +67,9 @@ if (isset($_SESSION['perfil'])) {
                     $pacientes = new userController();
                     $respuesta_pacientes = $pacientes->readAllUser();
                     require_once './views/recepcionista/lista_pacientes.php';
+                    $doctores = new userController();
+                    $respuesta_doctores = $doctores->readAllUser();
+                    require_once './views/recepcionista/lista_doctores.php';
                     echo "<script src='./js/script_pacientes6.js'></script>";
                     echo "<script src='./js/script_pacientes_mensajes.js'></script>";
                     break;
@@ -84,13 +87,25 @@ if (isset($_SESSION['perfil'])) {
                     require_once '../views/mensajes/mensajes_pacientes.php';
                     require_once '../views/mensajes/lista_mensajes.php';
                     break;
-                case "citas":
-
-                    require_once '../config/conexion.php';
-                    require_once '../controllers/citasController.php';
-
-
-                    break;
+                    case 'registrar_cita':
+                        require_once './views/Recepcionista/navbar.php';
+                        require_once './config/conexion.php';
+                        require_once './models/citasModel.php';
+                        require_once './controllers/citasController.php';
+                        require_once './models/userModel.php';
+                        require_once './controllers/userController.php';
+                        $usuarios = new userController();
+                        $respuestaUsuarios = $usuarios->readAllUser();
+                        echo "<div class='row'>";
+    
+                        $citas = new citasController();
+    
+                        $respuesta_citas = $citas->cargarCitas($_SESSION['id']);
+    
+                        require_once './views/Doctor/registrar_cita.php';
+                        require_once './views/citas/lista_citas.php';
+                        echo "<script src='./js/script_citas.js'></script>";
+                        break;
             }
 
             break;

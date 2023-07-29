@@ -3,7 +3,7 @@
 <div id="card_principal" class="row mx-auto overflow-hidden" style="border-radius:15px; background:#bee5eb; height:0px">
 
   <div id="card_info" class="col-lg-5 card text-white bg-primary mx-auto mb-3" style="margin:10px; max-height:500px;">
-    <div class="card-header">Paciente</div>
+  <div class="card-header">Paciente</div>
     <div class='card-body'>
       <h4 class='card-title' id='nombre_title'>Nombre de Usuario</h4>
       <h5 id='id_title'>Id</h5>
@@ -21,6 +21,7 @@
 
 </div>
 
+<div id="content" class='content overflow-auto col-lg-10 mx-auto' style='margin:20px'>
   <h4>Listado de Pacientes</h4>
   <div class="overflow-auto">
     <table id='tbl_product' class="table table-hover table-bordered table-responsive-md">
@@ -60,4 +61,5 @@
       </tbody>
     </table>
   </div>
+</div>
 </div>

@@ -5,8 +5,42 @@ function fn_cargar(datos){
   $("#card_principal").css("height","auto");
   
 }
+
 function fn_mensajes(){
     let div=document.getElementById('loads');
+    div.style.color="white";
+    let data={
+    "hidden":"item"
+    }
+   
+    $.ajax({
+            url: "controllers/accesos.php?pagina=cargas",
+            type: "POST",
+            datatype: "html",
+            data: data,
+                        success: function (response) {
+             
+              
+                if (response) {
+                   div.innerHTML=response;
+                } else {
+                   
+                }
+            }
+
+
+
+        });
+}
+function fn_cargardoctor(datos){
+  
+    $("#nombre_titledoctor").text(datos['name']);
+    $("#id_titledoctor").text(datos['id']);
+    $("#card_principalDoctor").css("height","auto");
+    
+  }
+function fn_mensajesDoctor(){
+    let div=document.getElementById('loadss');
     div.style.color="white";
     let data={
     "hidden":"item"
