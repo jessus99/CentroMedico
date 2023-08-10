@@ -4,6 +4,38 @@ $('#form_registro').submit(registrar);
 $('#form_modificar').submit(modificar);
 
 });
+function fn_eliminar_usuariopaciente(data){
+    
+  
+    var param={
+        "id":data,
+        "action":"delete"
+    }
+    $.ajax({
+            url: "controllers/pacienteController.php",
+            type: "POST",
+            datatype: "html",
+            data: param,
+            success: function (response) {
+            
+             if(response==true  ){
+                var msj=document.getElementById('msj');
+                msj.style.color="green";
+                msj.innerHTML="Usuario eliminado con éxito";
+                window.setTimeout(function () {
+                      
+                            window.location.href = "."
+                        }, 1000);
+                    } else {
+                        msj.style.color="red";
+                msj.innerHTML="Error eliminando usuario, intente nuevamente";
+                    }
+            }
+
+
+
+        });
+}
 function fn_eliminar_usuario(data){
     
   
@@ -43,7 +75,7 @@ function registrar(evento) {
         var datos = new FormData($('#form_registro')[0]);
       
         $.ajax({
-            url: "controllers/userController.php",
+            url: "controllers/pacienteController.php",
             type: "POST",
             data: datos,
             contentType: false,
@@ -73,7 +105,7 @@ function registrar(evento) {
         var datos = new FormData($('#form_modificar')[0]);
       
         $.ajax({
-            url: "controllers/userController.php",
+            url: "controllers/pacienteController.php",
             type: "POST",
             data: datos,
             contentType: false,

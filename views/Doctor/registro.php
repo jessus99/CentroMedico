@@ -17,31 +17,53 @@
             </div>
             <div class="form-group">
               <label for="apellidos">Apellidos: </label>
-              <input type="text" id="apellidos" class="form-control" name="apellidos" required="required" pattern="[A-Za-z ]+" placeholder="Ingrese su nombre">
-            </div>
-
-            <div class="form-group">
-              <label for="email">Correo Electrónico: </label>
-              <input type="email" class="form-control" id="email_reg" name="email" required="required" placeholder="Ingrese su correo electrónico">
-
-            </div>
-
-
-            <div class="form-group">
-              <label for="pass">Contraseña:</label>
-              <input type="password" id="pass1" class="form-control" name="password" minlength="6" maxlength="16" required="required" placeholder="Ingrese su contraseña">
+              <input type="text" id="apellidos" class="form-control" name="apellidos" required="required" pattern="[A-Za-z ]+" placeholder="Ingrese sus apellidos">
             </div>
             <div class="form-group">
+              <label for="fecha_nacimiento">Fecha de Nacimiento: </label>
+              <input type="text" id="fecha_nacimiento" class="form-control" name="fecha_nacimiento" required="required" placeholder="Ingrese su fecha de nacimiento">
+            </div>
+            <div class="form-group">
+              <label for="genero">Género: </label>
+              <input type="text" id="genero" class="form-control" name="genero" required="required" pattern="[A-Za-z ]+" placeholder="Ingrese su genero">
+            </div>
+            <div class="form-group">
+              <label for="direccion">Dirección: </label>
+              <input type="text" id="direccion" class="form-control" name="direccion" required="required" placeholder="Ingrese su direccion">
+            </div>
+            <div class="form-group">
+              <label for="numero_telefono">Número de télefono: </label>
+              <input type="int" id="numero_telefono" class="form-control" name="numero_telefono" required="required" placeholder="Ingrese su numero de teléfono">
+            </div>
+            <div class="form-group">
+              <label for="correo_electronico">Correo Electrónico: </label>
+              <input type="correo_electronico" class="form-control" id="correo_electronico_reg" name="correo_electronico" required="required" placeholder="Ingrese su correo electrónico">
+            <div class="form-group">
+              <label for="nombre_contacto_emergencia">Nombre del contacto de Emergencia: </label>
+              <input type="text" id="nombre_contacto_emergencia" class="form-control" name="nombre_contacto_emergencia" required="required" pattern="[A-Za-z ]+" placeholder="Ingrese el nombre del contacto de emergencia">
+            </div>
+            <div class="form-group">
+              <label for="telefono_contacto_emergencia">Número del contacto de Emergencia: </label>
+              <input type="int" id="telefono_contacto_emergencia" class="form-control" name="telefono_contacto_emergencia" required="required" placeholder="Ingrese el numero del contacto de emergencia">
+            </div>
+            </div>
+            <div class="form-group">
+
               <label for="exampleSelect2">Seleccione</label>
-              <select class="form-select" name="perfil" id="exampleSelect2">
-                <option value="1">Paciente</option>
-                <option value="2">Recepcionista</option>
-                <?php if (isset($_SESSION['perfil']) && $_SESSION['perfil'] == 3) { ?>
-                  <option value="3">Doctor</option>
-                <?php } ?>
-              </select>
-            </div>
 
+              <select class="form-select" name="perfil" id="exampleSelect2">
+
+                <option value="1">Paciente</option>
+
+                <?php if (isset($_SESSION['perfil']) && $_SESSION['perfil'] == 1) { ?>
+
+                  <option value="1">Paciente</option>
+
+                <?php } ?>
+
+              </select>
+
+            </div>
             <div id="mensajesokregistro" style="display:none">
               <div class="alert alert-dismissible alert-success">
                 <button type="button" class="" id="btnmensaje" data-bs-dismiss="alert">X</button>

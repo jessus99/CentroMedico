@@ -12,33 +12,58 @@
           <input type="hidden" name="id" value="" id="idu">
           <div class="modal-body">
 
-            <div class="form-group">
+          <div class="form-group">
               <label for="nombre">Nombre: </label>
-              <input type="text" id="nombreu" class="form-control" name="nombre" required="required" pattern="[A-Za-z ]+" placeholder="Ingrese su nombre">
+              <input type="text" id="nombre" class="form-control" name="nombre" required="required" pattern="[A-Za-z ]+" placeholder="Ingrese su nombre">
             </div>
             <div class="form-group">
               <label for="apellidos">Apellidos: </label>
-              <input type="text" id="apellidosu" class="form-control" name="apellidos" required="required" pattern="[A-Za-z ]+" placeholder="Ingrese sus Apellidos">
+              <input type="text" id="apellidos" class="form-control" name="apellidos" required="required" pattern="[A-Za-z ]+" placeholder="Ingrese sus apellidos">
             </div>
-
             <div class="form-group">
-              <label for="email">Correo Electrónico: </label>
-              <input type="email" class="form-control" id="emailu" name="email" required="required" placeholder="Ingrese su correo electrónico">
-
+              <label for="fecha_nacimiento">Fecha de Nacimiento: </label>
+              <input type="text" id="fecha_nacimiento" class="form-control" name="fecha_nacimiento" required="required" placeholder="Ingrese su fecha de nacimiento">
             </div>
-
-
-
             <div class="form-group">
+              <label for="genero">Género: </label>
+              <input type="text" id="genero" class="form-control" name="genero" required="required" pattern="[A-Za-z ]+" placeholder="Ingrese su genero">
+            </div>
+            <div class="form-group">
+              <label for="direccion">Dirección: </label>
+              <input type="text" id="direccion" class="form-control" name="direccion" required="required" placeholder="Ingrese su direccion">
+            </div>
+            <div class="form-group">
+              <label for="numero_telefono">Número de télefono: </label>
+              <input type="int" id="numero_telefono" class="form-control" name="numero_telefono" required="required" placeholder="Ingrese su numero de teléfono">
+            </div>
+            <div class="form-group">
+              <label for="correo_electronico">Correo Electrónico: </label>
+              <input type="correo_electronico" class="form-control" id="correo_electronico_reg" name="correo_electronico" required="required" placeholder="Ingrese su correo electrónico">
+            <div class="form-group">
+              <label for="nombre_contacto_emergencia">Nombre del contacto de Emergencia: </label>
+              <input type="text" id="nombre_contacto_emergencia" class="form-control" name="nombre_contacto_emergencia" required="required" pattern="[A-Za-z ]+" placeholder="Ingrese el nombre del contacto de emergencia">
+            </div>
+            <div class="form-group">
+              <label for="telefono_contacto_emergencia">Número del contacto de Emergencia: </label>
+              <input type="int" id="telefono_contacto_emergencia" class="form-control" name="telefono_contacto_emergencia" required="required" placeholder="Ingrese el numero del contacto de emergencia">
+            </div>
+            </div>
+            <div class="form-group">
+
               <label for="exampleSelect2">Seleccione</label>
-              <select class="form-select" name="perfil" id="perfilu">
-                <option value="3">Doctor</option>
+
+              <select class="form-select" name="perfil" id="exampleSelect2">
+
                 <option value="1">Paciente</option>
-                <option value="2">Recepcionista</option>
+
                 <?php if (isset($_SESSION['perfil']) && $_SESSION['perfil'] == 1) { ?>
-                  <option value="1">Doctor</option>
+
+                  <option value="1">Paciente</option>
+
                 <?php } ?>
+
               </select>
+
             </div>
 
             <div id="mensajesokregistro" style="display:none">

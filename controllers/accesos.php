@@ -120,8 +120,10 @@ if (isset($_SESSION['perfil'])) {
                     require_once './views/Doctor/navbar.php';
                     require_once './config/conexion.php';
                     require_once './models/userModel.php';
+                    require_once './models/pacienteModel.php';
                     require_once './controllers/userController.php';
-                    $pacientes= new userController();
+                    require_once './controllers/pacienteController.php';
+                    $pacientes= new pacienteController();
                     $respuesta_pacientes = $pacientes->readAllUser();
                     require_once './views/Doctor/registro.php';
                     require_once './views/Doctor/modificar.php';
@@ -134,7 +136,7 @@ if (isset($_SESSION['perfil'])) {
                     require_once './views/Doctor/navbar.php';
                     require_once './config/conexion.php';
                     require_once './models/mensajesModel.php';
-                    require_once './models/userModel.php';
+                    require_once './models/pacienteModel.php';
                     require_once './models/conversacionesModel.php';
                     require_once './controllers/userController.php';
                     require_once './controllers/mensajesController.php';
