@@ -128,6 +128,7 @@ if (isset($_SESSION['perfil'])) {
                     require_once './views/Doctor/registro.php';
                     require_once './views/Doctor/modificar.php';
                     require_once './views/Doctor/lista_pacientes.php';
+                    require_once './views/Doctor/mostrar.php';
                     
                     echo "<script src='./js/script_Doctor.js'></script>";
                     
@@ -136,6 +137,7 @@ if (isset($_SESSION['perfil'])) {
                     require_once './views/Doctor/navbar.php';
                     require_once './config/conexion.php';
                     require_once './models/mensajesModel.php';
+                    require_once './models/userModel.php';
                     require_once './models/pacienteModel.php';
                     require_once './models/conversacionesModel.php';
                     require_once './controllers/userController.php';

@@ -37,6 +37,7 @@ function Insertar_usuario(evento) {
         evento.preventDefault();
       
         var datos = new FormData($('#form_registro')[0]);
+       
       
         $.ajax({
             url: "controllers/pacienteController.php",

@@ -34,7 +34,7 @@
               <td class='size'><?php echo $a['apellidos']; ?></td>
               <td class='ajust'><?php echo $a['correo_electronico']; ?></td>
               <td class='ajust'>
-                <button class='btn btn-outline-primary' onclick='fn_cargar(<?php echo json_encode($a) ?>)'> Ver detalles</button>
+                <button class='btn btn-outline-primary' onclick='fn_ver(<?php echo json_encode($a) ?>)' data-toggle="modal" data-target="#exampleModal" > Ver detalles</button>
                 <input type="button" class="btn btn-outline-danger" onclick="fn_eliminar_usuariopaciente(<?= $a['id'] ?>)" value="Eliminar">
                 <button class="btn btn-outline-success" onclick='fn_edit_user(<?php echo json_encode($a) ?>)' data-toggle="modal" data-target="#modalmodificar">Modificar</button>
               </td>
@@ -43,11 +43,21 @@
               
  
             </tr>
+
+            
         <?php
           }
         } ?>
       </tbody>
     </table>
+    
+  
+</div>
+
+
+
+
+    
   </div>
   <div id="msj"></div>
 </div>
