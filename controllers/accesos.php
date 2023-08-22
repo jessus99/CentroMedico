@@ -130,9 +130,7 @@ if (isset($_SESSION['perfil'])) {
                     require_once './views/Doctor/modificar.php';
                     require_once './views/Doctor/lista_pacientes.php';
                     require_once './views/Doctor/medicamentos.php';
-                    require_once './views/Doctor/mostrar.php';
-                    
-                   
+                    require_once './views/Doctor/mostrar.php';  
                     
                     echo "<script src='./js/script_Doctor.js'></script>";
                     

@@ -4,7 +4,6 @@ $('#form_registro').submit(registrar);
 $('#form_modificar').submit(modificar);
 
 
-
 });
 function fn_eliminar_usuariopaciente(data){
     
@@ -181,7 +180,7 @@ function registrar(evento) {
   function fn_medicamentos(data){
   
 
-    console.log(data)
+
     var valorId_medicamento = document.getElementById("verId_medicamento")
     var valornombre_medicamento = document.getElementById("vernombre_medicamento")
     var valordosis_medicamento = document.getElementById("verdosis_medicamento")
