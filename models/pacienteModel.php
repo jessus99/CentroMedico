@@ -169,6 +169,8 @@ class pacienteModel
         }
         return $ingreso;
     }
+
+    
     public static function readOnceUserPerId($id)
     {
 
@@ -216,6 +218,7 @@ class pacienteModel
         }
     }
 
+
     public static function readAllUsuarios()
     {
         $usuarios; //arreglo 
@@ -232,6 +235,8 @@ class pacienteModel
         }
         return $usuarios;
     }
+
+    
 
     public static function deleteUser($usuario)
     {

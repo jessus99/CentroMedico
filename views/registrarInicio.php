@@ -1,4 +1,4 @@
-  <div class="modal fade secondary" id="modalregistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade secondary" id="modalregistroInicio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -7,7 +7,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form id="form_registro" action="" method="POST">
+        <form id="form_registroInicio" action="" method="POST">
           <input type="hidden" name="action" value="insert">
           <div class="modal-body">
 
@@ -34,9 +34,9 @@
             <div class="form-group">
               <label for="exampleSelect2">Seleccione</label>
               <select class="form-select" name="perfil" id="exampleSelect2">
-                <option value="1">Paciente</option>
+                <option value="3">Doctor</option>
+                <option value="2">Recepcionista</option>
                 <?php if (isset($_SESSION['perfil']) && $_SESSION['perfil'] == 3) { ?>
-                  <option value="3">Doctor</option>
                 <?php } ?>
               </select>
             </div>

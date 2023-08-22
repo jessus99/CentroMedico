@@ -129,7 +129,7 @@ class userController
             } else {
                 return false;
             }
-        } else {
+        } else {    
             return false;
         }
     }
@@ -181,6 +181,10 @@ class userController
         }
         return $query;
     }
+   
+
+
+
     public function deleteuser()
     {
         require_once '../models/conversacionesModel.php';
@@ -206,6 +210,7 @@ class userController
         $query = userModel::deleteUser($response);
         return $query;
     }
+
     public function updateuser()
     {
 

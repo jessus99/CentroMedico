@@ -4,7 +4,7 @@
 
 <div id="content" class='content overflow-auto' style='margin:50px 50px;'>
 <input type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modalregistro" value="Agregar">
-  <h4>Lista de Pacientes</h4>
+  <h4>Lista </h4>
   <div class="overflow-auto">
     <table id='tbl_product' class="table table-hover table-bordered table-responsive-md">
       <thead style='background-color: #38b6ff; color:white; font-weight: 500'>
@@ -34,7 +34,7 @@
               <td class='size'><?php echo $a['apellidos']; ?></td>
               <td class='ajust'><?php echo $a['correo_electronico']; ?></td>
               <td class='ajust'>
-                <button class='btn btn-outline-primary' onclick='fn_cargar(<?php echo json_encode($a) ?>)'> Ver detalles</button>
+                <button class='btn btn-outline-primary'  data-toggle="modalM" data-target="#modalmostrar"> Ver detalles</button>
                 <input type="button" class="btn btn-outline-danger" onclick="fn_eliminar_usuariopaciente(<?= $a['id'] ?>)" value="Eliminar">
                 <button class="btn btn-outline-success" onclick='fn_edit_user(<?php echo json_encode($a) ?>)' data-toggle="modal" data-target="#modalmodificar">Modificar</button>
               </td>

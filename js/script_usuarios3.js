@@ -1,6 +1,6 @@
 $(document).ready(function(){
 $('#formindex').submit(Insertar_usuario);
-$('#form_registro').submit(registrar);
+$('#form_registroInicio').submit(registrarInicio);
 $('#btnmensaje').click(cerrarventana);
 
 });
@@ -33,13 +33,14 @@ function Insertar_usuario(evento) {
 
         });
     }
-    function registrar(evento) {
+    function registrarInicio(evento) {
         evento.preventDefault();
       
-        var datos = new FormData($('#form_registro')[0]);
+        var datos = new FormData($('#form_registroInicio')[0]);
+        console.log(datos);
       
         $.ajax({
-            url: "controllers/pacienteController.php",
+            url: "controllers/UserController.php",
             type: "POST",
             data: datos,
             contentType: false,

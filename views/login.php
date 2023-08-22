@@ -29,7 +29,7 @@
 
                     <div class='container'>
                         <input type="submit" id="" class="btn btn-outline-primary" value='Ingresar'>
-                        <button type="button" id="btnregistro" value="registrar" class="btn btn-outline-success" data-toggle="modal" data-target="#modalregistro">Registrarse</button>
+                        <button type="button" id="btnregistro" value="registrarInicio" class="btn btn-outline-success" data-toggle="modal" data-target="#modalregistroInicio">Registrar</button>
                         <button type="button" id="btnpassword" value="password" class="btn btn-outline-danger" data-toggle="modal" data-target="#modal">Olvidar Contraseña?</button>
                     </div>
 
