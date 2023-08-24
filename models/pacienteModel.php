@@ -189,7 +189,7 @@ class pacienteModel
         return $result;
     }
 
-    public static function updateUsuario($usuario)
+    public static function updateUsuarioPaciente($usuario)
     {
 
         try {

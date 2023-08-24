@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 $('#form_registro').submit(registrar);
-$('#form_modificar').submit(modificar);
+$('#form_modificarPaciente').submit(modificarPaciente);
 
 
 });
@@ -36,17 +36,7 @@ function fn_eliminar_usuariopaciente(data){
 
 
         });
-}
-
-
-
-
-
-
-
-
-
-
+} 
 
 function fn_eliminar_usuario(data){
     
@@ -112,10 +102,10 @@ function registrar(evento) {
 
         });
     }
-    function modificar(evento) {
+    function modificarPaciente(evento) {
         evento.preventDefault();
      
-        var datos = new FormData($('#form_modificar')[0]);
+        var datos = new FormData($('#form_modificarPaciente')[0]);
       
         $.ajax({
             url: "controllers/pacienteController.php",

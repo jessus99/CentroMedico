@@ -1,13 +1,13 @@
-  <div class="modal fade secondary" id="modalmodificar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade secondary" id="modalmodificarPaciente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="">Registro</h5>
+          <h5 class="modal-title" id="">Modificar Datos del Paciente:</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form id="form_modificar" action="" method="POST">
+        <form id="form_modificarPaciente" action="" method="POST">
           <input type="hidden" name="action" value="update">
           <input type="hidden" name="id" value="" id="idu">
           <div class="modal-body">

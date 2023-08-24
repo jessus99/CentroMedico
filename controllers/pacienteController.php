@@ -220,7 +220,7 @@ class pacienteController
         $query = pacienteModel::deleteUser($response);
         return $query;
     }
-    public function updateuser()
+    public function updateuserPaciente()
     {
         $id = !empty($_POST['id']) ? $_POST['id'] : false;
         $nombre = !empty($_POST['nombre']) ? $_POST['nombre'] : false;
@@ -248,8 +248,9 @@ class pacienteController
             $response->setNombre_contacto_emergencia($nombre_contacto_emergencia);
             $response->setTelefono_contacto_emergencia($telefono_contacto_emergencia);
             $response->setPerfil($perfil);
-            $query = pacienteModel::updateUsuario($response);
+            $query = pacienteModel::updateUsuarioPaciente($response);
         }
+        
         return $query;
     }
 }
