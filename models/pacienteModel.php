@@ -235,7 +235,23 @@ class pacienteModel
         }
         return $usuarios;
     }
+    public static function mostrarUser($usuario) /////////////////////////////FALTA
+    {
+        try {
 
+            $db = conexion::getConnect();
+            $consulta = $db->prepare("SELECT * FROM tbl_usuariospacientes WHERE id =:id");
+            $consulta->bindValue(':id', $usuario->getId());
+            $resultado = $consulta->execute();
+           return $resultado ? $resultado : null;
+           
+
+        } catch (PDOException $e) { //captura en caso de error de proceso db
+            echo "se ha presentado un error " . $e->getMessage(); //muestra el mensaje de error.
+            $db->rollBack(); //en caso de error, elimina las transacciones que se han realizado
+            throw $e;
+        }
+    }
     
 
     public static function deleteUser($usuario)

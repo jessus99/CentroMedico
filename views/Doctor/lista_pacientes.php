@@ -36,7 +36,6 @@
               <td class='ajust'>
                 <button class='btn btn-outline-primary' onclick='fn_ver(<?php echo json_encode($a) ?>)' data-toggle="modal" data-target="#exampleModal" > Ver detalles</button>
                 <input type="button" class="btn btn-outline-danger" onclick="fn_eliminar_usuariopaciente(<?= $a['id'] ?>)" value="Eliminar">
-                <button class="btn btn-outline-success" onclick='fn_edit_user(<?php echo json_encode($a) ?>)' data-toggle="modal" data-target="#modalmodificarPaciente">Modificar</button>
                 <!-- <button class="btn btn-outline-success" onclick='fn_medicamentos(<?php echo json_encode($a) ?>)' data-target="#ModalToggle2" data-toggle="modal" >medicamentos</button> -->
               </td>
               

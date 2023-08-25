@@ -185,3 +185,74 @@ function registrar(evento) {
     valorduracion_tratamiento.value= data.duracion_tratamiento
 
   }
+  function fn_mensajes(){
+    let div=document.getElementById('loads');
+    div.style.color="white";
+    let data={
+    "hidden":"item"
+    }
+   
+    $.ajax({
+            url: "controllers/accesos.php?pagina=cargas",
+            type: "POST",
+            datatype: "html",
+            data: data,
+                        success: function (response) {
+             
+              
+                if (response) {
+                   div.innerHTML=response;
+                } else {
+                   
+                }
+            }
+
+
+
+        });
+}
+function fn_cargardoctor(datos){
+  
+    $("#nombre_titledoctor").text(datos['name']);
+    $("#id_titledoctor").text(datos['id']);
+    $("#card_principalDoctor").css("height","auto");
+    
+  }
+function fn_mensajesDoctor(){
+    let div=document.getElementById('loadss');
+    div.style.color="white";
+    let data={
+    "hidden":"item"
+    }
+   
+    $.ajax({
+            url: "controllers/accesos.php?pagina=cargas",
+            type: "POST",
+            datatype: "html",
+            data: data,
+                        success: function (response) {
+             
+              
+                if (response) {
+                   div.innerHTML=response;
+                } else {
+                   
+                }
+            }
+
+
+
+        });
+}
+function fn_cerrar_box(){
+    let element =document.getElementById('box_mensajesDoctor');
+    let elemento =document.getElementById('content');
+    elemento.remove();
+    element.remove();
+}
+function fn_cerrar_mensaje(){
+    let element =document.getElementById('box_mensajesDoctor');
+    let elemento =document.getElementById('content');
+    elemento.remove();
+    element.remove();
+}

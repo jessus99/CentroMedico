@@ -166,6 +166,7 @@ if (isset($_SESSION['perfil'])) {
                     require_once './controllers/citasController.php';
                     require_once './models/userModel.php';
                     require_once './controllers/userController.php';
+                    require_once './controllers/pacienteController.php';
                     $usuarios = new userController();
                     $respuestaUsuarios = $usuarios->readAllUser();
                     echo "<div class='row'>";

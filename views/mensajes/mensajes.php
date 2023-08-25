@@ -16,7 +16,7 @@
 
                                 <div class="form-group">
                                         <label for="asunto">Asunto</label>
-                                        <input type="text" id="asunto" class="form-control" name="asunto" required="required" pattern="[A-Za-z ]+" placeholder="Asunto del mensaje">
+                                        <input type="text" id="asunto" class="form-control" name="asunto" required="required" placeholder="Asunto del mensaje">
                                 </div>
                                 <div class="form-group">
                                         <label for="cantidad">Mensaje: </label>
@@ -30,7 +30,7 @@
                                         <select class="form-select" name="idReceptor" id="exampleSelect2">
                                                 <?php
                                                 foreach ($respuestaUsuarios as $respuesta) {
-                                                        if ($respuesta['perfil'] == "Recepcionista" || $respuesta['perfil'] == "Doctor" || $respuesta['perfil'] == "Paciente") {
+                                                        if ($respuesta['perfil'] == "Recepcionista") {
                                                 ?>
                                                                 <option value="<?= $respuesta['id'] ?>"><?= $respuesta['name'] . ", " . $respuesta['perfil'] ?></option>
                                                 <?php
